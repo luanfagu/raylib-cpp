@@ -25,9 +25,12 @@ namespace raylib {
 		Image(const std::string& fileName, int width, int height, int format, int headerSize) {
 			LoadRaw(fileName, width, height, format, headerSize);
 		}
+		/*
+		// TODO: Uncomment this once LoadImageAnim() is in a stable release.
 		Image(const std::string& fileName, int* frames) {
 			LoadAnim(fileName, frames);
 		}
+		*/
 		Image(::Texture2D texture) {
 			set(::GetTextureData(texture));
 		}
@@ -109,9 +112,12 @@ namespace raylib {
 			set(::LoadImageRaw(fileName.c_str(), width, height, format, headerSize));
 		}
 
+		/*
+		// TODO: Uncomment this once LoadImageAnim() is in a stable release.
 		void LoadAnim(const std::string& fileName, int* frames) {
 			set(::LoadImageAnim(fileName.c_str(), frames));
 		}
+		*/
 
 		inline void Unload() {
 			::UnloadImage(*this);
