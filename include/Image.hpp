@@ -237,9 +237,12 @@ namespace raylib {
 			return *this;
 		}
 
+		/**
+		 // TODO: Uncomment this once a new raylib comes out.
 		inline ::Color* GetPalette(int maxPaletteSize, int *extractCount) {
 			return ::GetImagePalette(*this, maxPaletteSize, extractCount);
 		}
+		*/
 
 		inline Rectangle GetAlphaBorder(float threshold) {
 			return ::GetImageAlphaBorder(*this, threshold);
@@ -300,6 +303,8 @@ namespace raylib {
 			return *this;
 		}
 
+		/**
+		 // TODO: Uncomment this.
 		inline Image& DrawText(const std::string& text, ::Vector2 position, int fontSize, ::Color color = WHITE){
 			::ImageDrawText(this, text.c_str(), (int)position.x, (int)position.y, fontSize, color);
 			return *this;
@@ -308,10 +313,16 @@ namespace raylib {
 			::ImageDrawText(this, text.c_str(), x, y, fontSize, color);
 			return *this;
 		}
+		*/
 		inline Image& DrawText(::Font font, const std::string& text, ::Vector2 position, float fontSize, float spacing, ::Color tint = WHITE){
 			::ImageDrawTextEx(this, font, text.c_str(), position, fontSize, spacing, tint);
 			return *this;
 		}
+
+	   inline Image& DrawText(const std::string& text, ::Vector2 position, int fontSize, ::Color color = WHITE){
+		   ::ImageDrawText(this, position, text.c_str(), fontSize, color);
+		   return *this;
+	   }
 
 		inline ::Color* GetImageData() {
 			return ::GetImageData(*this);

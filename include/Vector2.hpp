@@ -76,13 +76,19 @@ namespace raylib {
 			return Vector2Negate(*this);
 		}
 
+		/*
+		// TODO: Uncomment this once a new raylib stable comes out.
 		Vector2 Multiply(const Vector2& vector2) {
 			return Vector2Multiply(*this, vector2);
 		}
+		*/
 
+		/*
+		// TODO: Uncomment this once a new raylib stable comes out.
 		Vector2 operator*(const Vector2& vector2) {
 			return Vector2Multiply(*this, vector2);
 		}
+		*/
 
 		Vector2 Scale(const float scale) {
 			return Vector2Scale(*this, scale);
@@ -92,6 +98,8 @@ namespace raylib {
 			return Vector2Scale(*this, scale);
 		}
 
+		/*
+		// TODO: Uncomment this once a raylib stable comes out.
 		Vector2 Divide(const Vector2& vector2) {
 			return Vector2Divide(*this, vector2);
 		}
@@ -99,6 +107,7 @@ namespace raylib {
 		Vector2 operator/(const Vector2& vector2) {
 			return Vector2Divide(*this, vector2);
 		}
+		*/
 
 		Vector2& Divide(const float div) {
 			x /= div;
@@ -127,11 +136,14 @@ namespace raylib {
 		}
 
 
+		/*
+		// TODO: Uncomment this once a new raylib stable comes out.
 		Vector2& operator*=(const Vector2& vector2) {
 			set(Vector2Multiply(*this, vector2));
 
 			return *this;
 		}
+		*/
 
 		Vector2& operator*=(const float scale) {
 			set(Vector2Scale(*this, scale));
@@ -139,11 +151,14 @@ namespace raylib {
 			return *this;
 		}
 
+		/*
+		// TODO: Uncoment this.
 		Vector2& operator/=(const Vector2& vector2) {
 			set(Vector2Divide(*this, vector2));
 
 			return *this;
 		}
+		*/
 
 		Vector2& operator/=(const float div) {
 			this->x /= div;

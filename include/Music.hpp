@@ -29,13 +29,15 @@ namespace raylib {
 		inline void set(::Music music) {
 			ctxType = music.ctxType;
 			ctxData = music.ctxData;
-			looping = music.looping;
+			// looping = music.looping; // TODO: Uncomment this
+			loopCount = music.loopCount; // TODO: Remove this once updated to new raylib
 			sampleCount = music.sampleCount;
 			stream = music.stream;
 		}
 
 		GETTERSETTER(int,CtxType,ctxType)
-		GETTERSETTER(bool,Looping,looping)
+		// GETTERSETTER(bool,Looping,looping)
+		GETTERSETTER(unsigned int,LoopCount,loopCount)
 		GETTERSETTER(unsigned int,SampleCount,sampleCount)
 
         Music& operator=(const ::Music& music) {

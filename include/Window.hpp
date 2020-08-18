@@ -56,9 +56,13 @@ namespace raylib {
 			::CloseWindow();
 		};
 
+
+		/**
+		 // TODO: Uncomment this once a new raylib comes out.
 		inline bool IsCursorOnScreen() {
 			return ::IsCursorOnScreen();
 		}
+		*/
 
 		/**
 		 * Check if window has been initialized successfully
@@ -69,9 +73,13 @@ namespace raylib {
 		inline bool IsMinimized() {
 			return ::IsWindowMinimized();
 		}
+
+		/**
+		 // TODO: Uncomment this once a new raylib comes out.
 		inline bool IsFocused() {
 			return ::IsWindowFocused();
 		}
+		*/
 		inline bool IsResized() {
 			return ::IsWindowResized();
 		}
@@ -143,9 +151,13 @@ namespace raylib {
 			return ::GetWindowPosition();
 		}
 
+
+		/**
+		 // TODO: Uncomment this once a new raylib comes out.
 		inline Vector2 GetScaleDPI() {
 			return ::GetWindowScaleDPI();
 		}
+		*/
 
 		std::string GetMonitorName(int monitor) {
 			return std::string(::GetMonitorName(monitor));

@@ -99,6 +99,8 @@ namespace raylib {
 			return Vector3Scale(*this, scale);
 		}
 
+		/*
+		// TODO: Uncomment this.
 		Vector3 Divide(const Vector3& vector3) {
 			return Vector3Divide(*this, vector3);
 		}
@@ -106,6 +108,7 @@ namespace raylib {
 		Vector3 operator/(const Vector3& vector3) {
 			return Vector3Divide(*this, vector3);
 		}
+		*/
 
 		Vector3& Divide(const float div) {
 			x /= div;
